@@ -1,0 +1,122 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-header">
+      Eventos
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+  <div>
+    <ion-title class="title-div">
+      15 de Agosto de 2021
+    </ion-title>
+    <ion-card >
+     
+        <ion-item > 
+          <ion-icon name="barbell-outline" slot="start"></ion-icon>
+          <ion-label >
+            <h2>Fussion Fit</h2>
+            <h3>15:00</h3>
+            <p >Las Rosas</p>
+          </ion-label>
+        </ion-item>
+      
+    </ion-card>
+
+    <ion-card >
+     
+        <ion-item>
+          <ion-icon name="restaurant-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Pizza per tutti</h2>
+            <h3>19:00</h3>
+            <p>Arturo Prat</p>
+          </ion-label>    
+        </ion-item>
+      
+    </ion-card>
+  
+    <ion-card>
+        <ion-item>
+          <ion-icon name="barbell-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Cinemork</h2>
+            <h3>13:00</h3>
+            <p>Las Alerces</p>
+          </ion-label>
+        </ion-item>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-title class="title-div">
+      18 de Agosto de 2021
+    </ion-title>
+    <ion-card > 
+       <ion-item>
+          <ion-icon name="restaurant-outline" slot="start"></ion-icon>
+          <ion-label >
+            <h2>Yokohama's meal</h2>
+            <h3>19:00</h3>
+            <p>Los Aromos</p>
+          </ion-label>
+        </ion-item>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-title class="title-div">
+      20 de Agosto de 2021
+    </ion-title>
+    <ion-card >
+        <ion-item>
+          <ion-icon name="barbell-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Fussion Fit</h2>
+            <h3>15:00</h3>
+            <p>Las Rosas</p>
+          </ion-label>
+        </ion-item>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-title class="title-div">
+      22 de Agosto de 2021
+    </ion-title>
+    <ion-card>
+        <ion-item>
+          <ion-icon name="barbell-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Fussion Fit</h2>
+            <h3>15:00</h3>
+            <p>Las Rosas</p>
+          </ion-label>
+        </ion-item>
+    </ion-card>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goEventName()">
+      <ion-icon style="color: white!important;" name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

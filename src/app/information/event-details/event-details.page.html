@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-header">
+      Detalles del Evento
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+  <div>
+    <ion-card >
+      <ion-item > 
+        <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+        <ion-label >
+          <h2>Nombre del evento:</h2>
+          <p>Adopta un Animal</p>
+        </ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+  </ion-card>
+
+  <ion-card >
+    <ion-item > 
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label >
+        <h2>Fecha del evento:</h2>
+        <p>13/09/2021</p>
+      </ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+</ion-card>
+
+<ion-card >
+  <ion-item > 
+    <ion-icon name="home-outline" slot="start"></ion-icon>
+    <ion-label >
+      <h2>Dirección del evento:</h2>
+      <p>Camino de las Rosas 785</p>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+  </ion-item>
+</ion-card>
+
+<ion-card >
+  <ion-item > 
+    <ion-icon name="people-outline" slot="start"></ion-icon>
+    <ion-label >
+      <h2>Cantidad de asistentes:</h2>
+      <p>70</p>
+
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+  </ion-item>
+</ion-card>
+
+<ion-card >
+  <ion-item > 
+    <ion-icon name="people-outline" slot="start"></ion-icon>
+    <ion-label >
+     <h2>Trabajadores:</h2>
+      <p>20</p>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+  </ion-item>
+</ion-card>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button >
+      <!-- (click)="goAssistControl()" -->
+      <ion-icon style="color: white!important;" name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
