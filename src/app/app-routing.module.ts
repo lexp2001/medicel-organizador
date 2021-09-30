@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
+
   {
 
     path: 'email',
@@ -59,6 +56,30 @@ const routes: Routes = [
   {
     path: 'event-details',
     loadChildren: () => import('./information/event-details/event-details.module').then( m => m.EventDetailsPageModule)
+  },
+  {
+    path: 'forgotpassword',
+    loadChildren: () => import('./forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
+  },
+  {
+    path: 'daily-event-details',
+    loadChildren: () => import('./daily-event-details/daily-event-details.module').then( m => m.DailyEventDetailsPageModule)
+  },
+  {
+    path: 'details-of-planned-events',
+    loadChildren: () => import('./details-of-planned-events/details-of-planned-events.module').then( m => m.DetailsOfPlannedEventsPageModule)
+  },
+  {
+    path: 'planned-events',
+    loadChildren: () => import('./planned-events/planned-events.module').then( m => m.PlannedEventsPageModule)
+  },
+  {
+    path: 'daily-events',
+    loadChildren: () => import('./daily-events/daily-events.module').then( m => m.DailyEventsPageModule)
+  },
+  {
+    path: 'assistants',
+    loadChildren: () => import('./assistants/assistants.module').then( m => m.AssistantsPageModule)
   }
 ];
 @NgModule({

@@ -1,0 +1,137 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <div class="medicel-home-header">
+      <ion-img src="assets/images/logo-medicel-alone.svg"></ion-img>
+      <div class="medicel-home-user">
+        <p class="medicel-home-welcome"> Bienvenido,</p>
+        <p class="medicel-home-name">Hugo Guzman</p>
+      </div>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  
+
+  <ion-toolbar>
+    <ion-segment value="all">
+      <ion-segment-button value="all">Eventos <br>Planificados</ion-segment-button>
+      <ion-segment-button value="question">Eventos <br>Diarios</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/celestina.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">Hoy- EN CURSO</p>
+        <p class="p-event-name">La Celestina</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/lavida.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">25 SEP 2021</p>
+        <p class="p-event-name">La vida es sueño</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/romeo.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">30 SEP 2021</p>
+        <p class="p-event-name">Romeo y Julieta</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/hamlet.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">03 OCT 2021</p>
+        <p class="p-event-name">Hamlet</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/rey.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">15 NOV 2021</p>
+        <p class="p-event-name">El rey Lear</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/divina.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">22 NOV 2021</p>
+        <p class="p-event-name">La divina comedia</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/opera.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="day">04 DIC 2021</p>
+        <p class="p-event-name">El fantasma de la Ópera</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goName()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,131 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <div class="medicel-home-header">
+      <ion-img src="assets/images/logo-medicel-alone.svg"></ion-img>
+      <div class="medicel-home-user">
+        <p class="medicel-home-welcome"> Bienvenido,</p>
+        <p class="medicel-home-name">Hugo Guzman</p>
+      </div>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  
+
+  <ion-toolbar>
+    <ion-segment value="all">
+      <ion-segment-button value="all">Eventos <br>Planificados</ion-segment-button>
+      <ion-segment-button value="question">Eventos <br>Diarios</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+ 
+  <div class="my-events">
+    <ion-title>Sábado 25 de Septiembre</ion-title>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/desayuno.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="hour">08:00 a 10:30</p>
+        <p class="p-event-name">Desayuno</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/almuerzo.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="hour">12:00 a 14:00</p>
+        <p class="p-event-name">Almuerzo</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/pizza.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="hour">18:30 a 23:00</p>
+        <p class="p-event-name">Noche de Pizza</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <div>
+    <ion-title>Domingo 26 de Septiembre</ion-title>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/desayuno.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="hour">08:00 a 10:30</p>
+        <p class="p-event-name">Desayuno</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/almuerzo.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="hour">12:00 a 14:00</p>
+        <p class="p-event-name">Almuerzo</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail>
+        <ion-img src="assets/images/fast.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-text>
+        <p class="hour">18:30 a 23:00</p>
+        <p class="p-event-name">Noche de FastFood</p>
+        <p>
+          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+        </p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goName()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>
