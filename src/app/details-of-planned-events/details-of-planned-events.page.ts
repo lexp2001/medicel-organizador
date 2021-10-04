@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-details-of-planned-events',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsOfPlannedEventsPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  goAssistants(){
+    this.router.navigate(['/assistants'])
+  }
+
+  goWorkers(){
+    this.router.navigate(['/workers'])
+  }
   ngOnInit() {
   }
 

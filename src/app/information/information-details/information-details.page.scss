@@ -1,34 +1,11 @@
 
-ion-header{
-    position: absolute;
-}
-
-
-
 ion-card{
     --ion-background-color:transparent;
     box-shadow: none !important;
 }
 
-ion-card-title{
-    margin-top:50px !important;
-    font-size:25px;
-    color: #53565A;
-    font-weight: 600;
-    text-align: start;
-}
-
-ion-card-subtitle{
-    text-align: start;
-    padding-top: 10px !important;
-    font-size: 13px;
-    color: #888C91;
-    font-weight: 400;
-    text-transform: none;
-
-}
-
 ion-item{
+    margin-left: 20px;
     padding-top: 10px;
     color:#74787E;
     --border-color: #D4D7DB; 
@@ -45,10 +22,8 @@ ion-item{
     }
 }
 
-ion-input:hover{
-    color: #215AB7;
 }
 
+.custom-no-padding {
+    padding: 0!important;
 }
-
-

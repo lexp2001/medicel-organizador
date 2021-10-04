@@ -13,6 +13,11 @@ export class RutPage implements OnInit {
   goRubro(){
     this.router.navigate(['/rubro'])
   }
+
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
+  
   ngOnInit() {
   }
 

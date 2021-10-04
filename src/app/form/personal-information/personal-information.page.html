@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+   <p>Información</p>
+    <ion-buttons slot="end">
+      <ion-button  (click)="goDetailsEvent()">
+        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-list>
+  
+    
+  
+    <ion-item  (click)="goEmail()">
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Email:</h5>
+        <h2>andresmallea@gmail.com</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  
+    <ion-item  (click)="goName()">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Nombre y Apellido:</h5>
+        <h2>Andrés Mallea</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    
+    <ion-item  (click)="goRubro()">
+      <ion-icon name="apps-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Rubro:</h5>
+        <h2>1234567</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    
+    <ion-item  (click)="goRut()">
+      <ion-icon name="tablet-landscape-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Rut:</h5>
+        <h2>45678910</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    
+    
+  
+  
+  </ion-list>
+  </ion-content>
+  

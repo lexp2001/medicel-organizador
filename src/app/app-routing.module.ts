@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
   {
 
     path: 'email',
@@ -80,6 +84,18 @@ const routes: Routes = [
   {
     path: 'assistants',
     loadChildren: () => import('./assistants/assistants.module').then( m => m.AssistantsPageModule)
+  },
+  {
+    path: 'workers',
+    loadChildren: () => import('./workers/workers.module').then( m => m.WorkersPageModule)
+  },
+  {
+    path: 'personal-information',
+    loadChildren: () => import('./form/personal-information/personal-information.module').then( m => m.PersonalInformationPageModule)
+  },
+  {
+    path: 'information-details',
+    loadChildren: () => import('./information/information-details/information-details.module').then( m => m.InformationDetailsPageModule)
   }
 ];
 @NgModule({

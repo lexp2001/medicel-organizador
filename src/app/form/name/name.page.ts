@@ -13,6 +13,11 @@ export class NamePage implements OnInit {
   goRut(){
     this.router.navigate(['/rut'])
   }
+
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
+  
   ngOnInit() {
   }
 

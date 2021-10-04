@@ -14,6 +14,10 @@ export class EmailPage implements OnInit {
     this.router.navigate(['/name'])
   }
 
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
+
   ngOnInit() {
   }
 

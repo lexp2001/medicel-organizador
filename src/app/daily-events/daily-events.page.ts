@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-daily-events',
@@ -7,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DailyEventsPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  goEmail(){
+    this.router.navigate(['/email'])
+  }
+
+  goEventDetails(){
+    this.router.navigate(['/details-of-planned-events'])
+  }
+
+  goEventName(){
+    this.router.navigate(['/event-name'])
+  }
   ngOnInit() {
   }
 

@@ -10,8 +10,12 @@ export class RubroPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  goTab1(){
-    this.router.navigate(['/login'])
+  goPersonalInformation(){
+    this.router.navigate(['/personal-information'])
+  }
+  
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
   }
   
   ngOnInit() {
