@@ -26,6 +26,11 @@ export class PersonalInformationPage implements OnInit {
     this.router.navigate(['/rut'])
   }
 
+  
+  goDailyEvents(){
+    this.router.navigate(['/daily-events'])
+  }
+
   ngOnInit() {
   }
 

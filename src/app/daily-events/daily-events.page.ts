@@ -10,6 +10,10 @@ export class DailyEventsPage implements OnInit {
 
   constructor(private router: Router) { }
 
+  goPlannedEvents(){
+    this.router.navigate(['/planned-events'])
+  }
+
   goEmail(){
     this.router.navigate(['/email'])
   }

@@ -18,6 +18,11 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/forgotpassword'])
   }
 
+  goEmail(){
+    this.router.navigate(['/email'])
+  }
+
+
 
   ngOnInit() {
   }
