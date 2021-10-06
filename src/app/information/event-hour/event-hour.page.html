@@ -7,7 +7,9 @@
       3 de 6
     </ion-title>
     <ion-buttons slot="end">
-        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      <ion-button  (click)="onClickCLose()">
+        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -27,20 +29,11 @@
 
     <ion-card-content>
       <ion-item>
-        <ion-input name="email" types="text" placeholder="Hora del Evento">
-          <ion-icon name="time-outline"></ion-icon>
-        </ion-input>
-
         
+        <ion-label position="floating">Hora</ion-label>
+        <ion-datetime display-format="h:mm A" picker-format="h:mm A" >
+        </ion-datetime>
       </ion-item>
-
-
-
-      <!-- <div class="sign-btn-wrap">
-        <ion-button shape="round" fill="solid" class="sgn-btn">Siguiente</ion-button>
-  
-      </div> -->
-     
     </ion-card-content>
 
   </ion-card>

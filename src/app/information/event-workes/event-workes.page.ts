@@ -16,5 +16,7 @@ export class EventWorkesPage implements OnInit {
 
   ngOnInit() {
   }
-
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
 }

@@ -13,6 +13,9 @@ export class EventNamePage implements OnInit {
   goEventDate(){
     this.router.navigate(['/event-date'])
   }
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
 
   ngOnInit() {
   }

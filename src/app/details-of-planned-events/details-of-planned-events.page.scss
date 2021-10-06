@@ -4,6 +4,26 @@
     padding: 20px;
 }
 
+
+
+.container {
+    position: relative;
+  }
+  
+  .topleft {
+    position: absolute;
+    top: 8px;
+    font-size: 18px;
+  }
+  
+  img { 
+    width: 100%;
+    height: auto;
+    border-radius:0px 0px 35px 35px !important;
+  }
+
+
+
 .event-name{
     display: flex;
     padding: 20px;

@@ -1,3 +1,17 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+   <p>Información</p>
+   <ion-buttons slot="end">
+    <ion-button  (click)="onClickCLose()">
+      <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
 <!-- <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <div class="medicel-home-header" >
@@ -7,11 +21,30 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content [fullscreen]="true">
-
+<ion-content>
+  
+<div class="container">
+  <img src="assets/images/desayuno.png" alt="Cinque Terre" width="1000" height="300">
   <div>
+  <ion-buttons class="topleft">  
+    <ion-button  (click)="onClickCLose() " style="color: rgb(158, 158, 158);">
+      <ion-icon slot="icon-only"name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</div>
+  
+</div>
+
+  <!-- <div>
+    <ion-buttons slot="end">
+      <ion-button  (click)="onClickCLose()">
+        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <img src="assets/images/desayuno.png" style="border-radius:0px 0px 35px 35px !important;" >
-  </div>
+    
+  </div> -->
+
   <div >
     <ion-title>Desayuno</ion-title>
   </div>

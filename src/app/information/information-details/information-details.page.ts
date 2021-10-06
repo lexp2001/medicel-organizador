@@ -34,6 +34,10 @@ export class InformationDetailsPage implements OnInit {
     this.router.navigate(['/event-workes'])
   }
 
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
+
   ngOnInit() {
   }
 

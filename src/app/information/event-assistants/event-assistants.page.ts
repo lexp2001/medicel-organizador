@@ -15,5 +15,7 @@ export class EventAssistantsPage implements OnInit {
   }
   ngOnInit() {
   }
-
+  onClickCLose(){
+    this.router.navigate(['/daily-events'])
+  }
 }

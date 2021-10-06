@@ -17,6 +17,10 @@ export class DetailsOfPlannedEventsPage implements OnInit {
   goWorkers(){
     this.router.navigate(['/workers'])
   }
+
+  onClickCLose(){
+    this.router.navigate(['/workers'])
+  }
   ngOnInit() {
   }
 

@@ -7,14 +7,21 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content [fullscreen]="true">
-
+<div class="container">
+  <img src="assets/images/opera.jpg" alt="Cinque Terre" width="1000" height="300">
   <div>
-    <img src="assets/images/opera.jpg" style="border-radius:0px 0px 35px 35px !important;" >
-  </div>
-  <div >
-    <ion-title>El fantasma de la ópera</ion-title>
-  </div>
+  <ion-buttons class="topleft">  
+    <ion-button  (click)="onClickCLose() " style="color: rgb(158, 158, 158);">
+      <ion-icon slot="icon-only"name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</div>
+  
+</div>
+
+<ion-content >
+
+
 
   <div class="event-name" >
     <div class="div-date">
