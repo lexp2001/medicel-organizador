@@ -10,9 +10,10 @@ export class WorkersCheckPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  goDetailsEvent(){
-    this.router.navigate(['/details-of-planned-events'])
+  onClickCLose(){
+    this.router.navigate(['/daily-event-details'])
   }
+  
 
   ngOnInit() {
   }

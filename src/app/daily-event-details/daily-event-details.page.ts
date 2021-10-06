@@ -14,6 +14,10 @@ export class DailyEventDetailsPage implements OnInit {
     this.router.navigate(['/invitation-workers'])
   }
 
+  onClickCLose(){
+    this.router.navigate(['/planned-events'])
+  }
+
   ngOnInit() {
   }
 
