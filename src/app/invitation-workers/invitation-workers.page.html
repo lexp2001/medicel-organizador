@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+    
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="button-workers">
+    <div>
+      <ion-button (click)="showToast()"  >Si, Enviar una invitación a todos</ion-button>
+    </div>
+    <div>
+      <ion-button (click)="goWorkersCheck()" >Si, pero sólo a algunos</ion-button>
+    </div>
+    <div>
+      <ion-button (click)="goCancelInvitation()" >No, cancelar envío</ion-button>
+    </div>
+  </div>
+
+</ion-content>

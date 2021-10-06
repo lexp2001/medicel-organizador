@@ -96,6 +96,14 @@ const routes: Routes = [
   {
     path: 'information-details',
     loadChildren: () => import('./information/information-details/information-details.module').then( m => m.InformationDetailsPageModule)
+  },
+  {
+    path: 'workers-check',
+    loadChildren: () => import('./workers-check/workers-check.module').then( m => m.WorkersCheckPageModule)
+  },
+  {
+    path: 'invitation-workers',
+    loadChildren: () => import('./invitation-workers/invitation-workers.module').then( m => m.InvitationWorkersPageModule)
   }
 ];
 @NgModule({
