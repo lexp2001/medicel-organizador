@@ -23,9 +23,10 @@ export class PlannedEventsPage implements OnInit {
     this.router.navigate(['/daily-event-details'])
   }
 
-  goEmail(){
-    this.router.navigate(['/email'])
+  goPersonalInformation(){
+    this.router.navigate(['/personal-information'])
   }
+
 
   ngOnInit() {
   }

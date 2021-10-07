@@ -18,6 +18,9 @@ export class DailyEventDetailsPage implements OnInit {
     this.router.navigate(['/planned-events'])
   }
 
+  goInvitationClients(){
+    this.router.navigate(['/invitation-clients'])
+  }
   ngOnInit() {
   }
 
