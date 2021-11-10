@@ -19,22 +19,22 @@
     </ion-segment>
   </ion-toolbar>
 
-  <ion-list *ngIf="eventList">
+  <ion-list *ngIf="listVisibility">
     <ion-item *ngFor="let event of eventList, let eventIndex = index" (click)="goEventDetails()">
       <ion-thumbnail>
         <ion-img src="assets/images/celestina.jpg"></ion-img>
       </ion-thumbnail>
       <ion-text>
-        <p class="day">Hoy- EN CURSO</p>
+        <p class="day">{{event.date}}</p>
         <p class="p-event-name">{{event.name}}</p>
         <p>
-          <ion-icon name="location-outline"></ion-icon>Camino las rosas
+          <ion-icon name="location-outline"></ion-icon>{{event.address}}
         </p>
       </ion-text>
     </ion-item>
   </ion-list>
 
-<!--   
+  <!--   
   <ion-list>
     <ion-item (click)="goEventDetails()">
       <ion-thumbnail>
@@ -132,3 +132,6 @@
   </ion-fab>
 
 </ion-content>
+
+<ion-spinner *ngIf="!listVisibility" style="position: absolute; z-index: 99; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);">
+</ion-spinner>

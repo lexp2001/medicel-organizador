@@ -20,6 +20,8 @@ export class PlannedEventsPage implements OnInit {
     }
   ]
 
+  public listVisibility = false
+
   constructor(
     private router: Router,
     private eventService: EventService) { }
@@ -41,10 +43,12 @@ export class PlannedEventsPage implements OnInit {
   }
 
   getEvents() {
+    this.listVisibility = false
     this.eventService.getEvents()
       .subscribe(data => {
         this.eventList = data
-        console.log(this.eventList)
+        this.listVisibility = true
+        //console.log(this.eventList)
       })
   }
 
