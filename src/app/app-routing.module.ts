@@ -104,6 +104,14 @@ const routes: Routes = [
   {
     path: 'invitation-workers',
     loadChildren: () => import('./invitation-workers/invitation-workers.module').then( m => m.InvitationWorkersPageModule)
+  },
+  {
+    path: 'invitation-clients',
+    loadChildren: () => import('./invitation-clients/invitation-clients.module').then( m => m.InvitationClientsPageModule)
+  },
+  {
+    path: 'clients-check',
+    loadChildren: () => import('./clients-check/clients-check.module').then( m => m.ClientsCheckPageModule)
   }
 ];
 @NgModule({

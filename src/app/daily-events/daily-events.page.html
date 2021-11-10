@@ -4,7 +4,7 @@
       <ion-img src="assets/images/logo-medicel-alone.svg"></ion-img>
       <div class="medicel-home-user">
         <p class="medicel-home-welcome"> Bienvenido,</p>
-        <button ion-button (click)="goEmail()">Hugo Guzman</button>
+        <button ion-button (click)="goPersonalInformation()">Hugo Guzman</button>
       </div>
     </div>
 
@@ -121,11 +121,44 @@
     </ion-item>
   </ion-list>
 
+  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="goEventName()">
       <ion-icon name="add-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
+  <ion-tabs>
+    <!-- Tab bar -->
+    <ion-tab-bar color="primary" slot="bottom">
+
+      <ion-tab-button  tab="account">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Eventos <br> Diarios</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="contact">
+        <ion-icon name="call"></ion-icon>
+        <ion-label>Eventos <br> Planificados</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="settings">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Mi <br>Cuenta</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="settings">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Mis <br>Clientes</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="settings">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Mis <br>Trabajadores</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+  
 
 </ion-content>

@@ -30,6 +30,12 @@ goCancelInvitation(){
   this.router.navigate(['/daily-event-details'])
 }
 
+
+
+onClickCLose(){
+  this.router.navigate(['/daily-event-details'])
+}
+
   ngOnInit() {
   }
 
