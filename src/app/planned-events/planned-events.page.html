@@ -20,9 +20,9 @@
   </ion-toolbar>
 
   <ion-list *ngIf="listVisibility">
-    <ion-item *ngFor="let event of eventList, let eventIndex = index" (click)="goEventDetails()">
-      <ion-thumbnail>
-        <ion-img src="assets/images/celestina.jpg"></ion-img>
+    <ion-item *ngFor="let event of eventList, let eventIndex = index" (click)="goEventDetails(event._id)">
+      <ion-thumbnail style="width: 80px;">
+        <ion-img src="{{event.cover}}"></ion-img>
       </ion-thumbnail>
       <ion-text>
         <p class="day">{{event.date}}</p>

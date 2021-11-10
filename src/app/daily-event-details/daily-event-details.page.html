@@ -1,67 +1,67 @@
+<ng-container *ngIf="currentEvent != null">
 
-
-<div class="container">
-  <img src="assets/images/opera.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div>
-  <ion-buttons class="topleft">  
-    <ion-button  (click)="onClickCLose() " style="color: rgb(158, 158, 158);">
-      <ion-icon slot="icon-only"name="arrow-back-outline"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</div>
-  
-</div>
-
-<ion-content >
-
-
-
-  <div class="event-name" >
-    <div class="div-date">
-      <p>JUL <br> 10</p></div>
+  <div class="container">
+    <img src="{{currentEvent.cover}}" alt="Cinque Terre" width="1000" height="300">
     <div>
-      <p>Martes</p>
-      <p  class="hour-event">10:00 | 12:00PM</p>
-    </div>
-    <div>
-    </div>
-  </div>
-
-  <div class=" buttons-invitation">
-    <button (click)="goInvitationWorkers()">Enviar invitación <br> a trabajadores</button>
-    <button (click)="goInvitationClients()">Enviar invitación <br> a clientes</button>
-  </div>
-
-  <div class="about">
-    <ion-title>Sobre</ion-title>
-    <p>La obra está inspirada en hechos reales
-      y en la novela Trilby de George du Ma...
-    </p>
-    <p class="button-read">Leer mas...</p>
-  </div>
-
-
-
-
-  <div class="maps">
-
-    <ion-img class="img-maps" src="assets/images/maps.png"></ion-img> 
-  </div>
-
-  <div class="widgets">
-
-    <div class="div-red">
-      <p>Capacidad</p>
-      <p class="p-red">250</p>
-    </div>
-    <div class="div-blue">
-      <p>Inscritos</p>
-      <p class="p-blue">10</p>
-    </div>
-    <div class="div-green">
-      <p>Vacunados</p>
-      <p class="p-green">100%</p>
+      <ion-buttons class="topleft">
+        <ion-button (click)="onClickCLose() " style="color: rgb(158, 158, 158);">
+          <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </div>
 
   </div>
-</ion-content>
+
+  <ion-content>
+
+    <div class="event-name">
+      <div class="div-date">
+        <p>JUL <br> 10</p>
+      </div>
+      <div>
+        <p>{{currentEvent.date}}</p>
+        <p class="hour-event">{{currentEvent.hour}}</p>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class=" buttons-invitation">
+      <button (click)="goInvitationWorkers()">Enviar invitación <br> a trabajadores</button>
+      <button (click)="goInvitationClients()">Enviar invitación <br> a clientes</button>
+    </div>
+
+    <div class="about">
+      <!-- <ion-title>Sobre</ion-title> -->
+      <p>{{currentEvent.description}}
+      </p>
+      <p class="button-read">Leer mas...</p>
+    </div>
+
+    <div class="maps">
+
+      <ion-img class="img-maps" src="assets/images/maps.png"></ion-img>
+    </div>
+
+    <div class="widgets">
+
+      <div class="div-red">
+        <p>Capacidad</p>
+        <p class="p-red">250</p>
+      </div>
+      <div class="div-blue">
+        <p>Inscritos</p>
+        <p class="p-blue">10</p>
+      </div>
+      <div class="div-green">
+        <p>Vacunados</p>
+        <p class="p-green">100%</p>
+      </div>
+
+    </div>
+  </ion-content>
+
+</ng-container>
+
+<ion-spinner *ngIf="currentEvent == null" style="position: absolute; z-index: 99; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);">
+</ion-spinner>
