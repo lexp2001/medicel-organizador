@@ -12,30 +12,29 @@
 
 <ion-content [fullscreen]="true">
 
-  
-
   <ion-toolbar>
     <ion-segment value="all">
-      <ion-segment-button value="question" (click)="goDailyEvents()" >Eventos <br>Diarios</ion-segment-button>
-      <ion-segment-button value="all" >Eventos <br>Planificados</ion-segment-button>
+      <ion-segment-button value="question" (click)="goDailyEvents()">Eventos <br>Diarios</ion-segment-button>
+      <ion-segment-button value="all">Eventos <br>Planificados</ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 
-
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
+  <ion-list *ngIf="eventList">
+    <ion-item *ngFor="let event of eventList, let eventIndex = index" (click)="goEventDetails()">
       <ion-thumbnail>
         <ion-img src="assets/images/celestina.jpg"></ion-img>
       </ion-thumbnail>
       <ion-text>
         <p class="day">Hoy- EN CURSO</p>
-        <p class="p-event-name">La Celestina</p>
+        <p class="p-event-name">{{event.name}}</p>
         <p>
           <ion-icon name="location-outline"></ion-icon>Camino las rosas
         </p>
       </ion-text>
     </ion-item>
   </ion-list>
+
+<!--   
   <ion-list>
     <ion-item (click)="goEventDetails()">
       <ion-thumbnail>
@@ -96,7 +95,6 @@
     </ion-item>
   </ion-list>
 
-
   <ion-list>
     <ion-item (click)="goEventDetails()">
       <ion-thumbnail>
@@ -125,7 +123,7 @@
         </p>
       </ion-text>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="goEventName()">
