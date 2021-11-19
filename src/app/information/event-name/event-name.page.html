@@ -7,8 +7,8 @@
       1 de 6
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button  (click)="onClickCLose()">
-        <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
+      <ion-button (click)="onClickCLose()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -29,20 +29,14 @@
 
     <ion-card-content>
       <ion-item>
-        <ion-input name="name" types="text" placeholder="Nombre del Evento">
+        <ion-input name="name" types="text" placeholder="Nombre del Evento"
+          [(ngModel)]="event.eventData.name">
           <ion-icon name="chatbubbles-outline"></ion-icon>
         </ion-input>
-
-        
       </ion-item>
-
-
-
       <!-- <div class="sign-btn-wrap">
         <ion-button shape="round" fill="solid" class="sgn-btn">Siguiente</ion-button>
-  
       </div> -->
-     
     </ion-card-content>
 
   </ion-card>

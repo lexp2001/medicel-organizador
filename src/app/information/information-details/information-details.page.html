@@ -3,74 +3,72 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-   <p>Información</p>
-   <ion-buttons slot="end">
-    <ion-button  (click)="onClickCLose()">
-      <ion-icon slot="icon-only"name="close-circle-outline"></ion-icon>
-    </ion-button>
-  </ion-buttons>
+    <p>Información</p>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClickCLose()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
 
   <ion-list>
-  
-    
-  
-    <ion-item  (click)="goName()">
+
+    <ion-item (click)="goName()">
       <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Nombre del evento:</h5>
-        <h2>Desayuno</h2>
+        <h2>{{event.eventData.name}}</h2>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-  
-    <ion-item  (click)="goDate()">
-      <ion-icon name="calendar-number-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Fecha del evento:</h5>
-        <h2>25 Septiembre</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-    
-    <ion-item  (click)="goHour()">
-      <ion-icon name="alarm-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Hora del evento:</h5>
-        <h2>08:00 - 10:30AM</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
-    
-    <ion-item  (click)="goAddress()">
-      <ion-icon name="location-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h5>Dirección de evento:</h5>
-        <h2>Ruta las rosas</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-item>
 
-    <ion-item  (click)="goAssistants()">
+    <ion-item (click)="goDate()">
+      <ion-icon name="calendar-number-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Fecha del evento:</h5>
+        <h2>{{event.eventData.date}}</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item (click)="goHour()">
+      <ion-icon name="alarm-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Hora del evento:</h5>
+        <h2>{{event.eventData.hour}}</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item (click)="goAddress()">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h5>Dirección de evento:</h5>
+        <h2>{{event.eventData.address}}</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item (click)="goAssistants()">
       <ion-icon name="people-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Cantidad de asistentes al evento:</h5>
@@ -78,12 +76,12 @@
       </ion-label>
       <ion-buttons slot="end">
         <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-item>
 
-    <ion-item  (click)="goWorkes()">
+    <ion-item (click)="goWorkes()">
       <ion-icon name="people-outline" slot="start"></ion-icon>
       <ion-label>
         <h5>Trabajadores:</h5>
@@ -91,14 +89,17 @@
       </ion-label>
       <ion-buttons slot="end">
         <ion-button>
-          <ion-icon slot="icon-only"name="chevron-forward-outline"></ion-icon>
+          <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-item>
-    
-    
-  
-  
+
   </ion-list>
-  </ion-content>
-  
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="saveEvent()">
+    <ion-fab-button>
+      <ion-icon name="save-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

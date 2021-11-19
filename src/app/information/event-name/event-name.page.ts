@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventSharedService } from 'src/app/services/event-shared.service';
 
 @Component({
   selector: 'app-event-name',
@@ -7,8 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./event-name.page.scss'],
 })
 export class EventNamePage implements OnInit {
+  event: any
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private eventSharedService: EventSharedService) { }
 
   goEventDate(){
     this.router.navigate(['/event-date'])
@@ -18,6 +22,7 @@ export class EventNamePage implements OnInit {
   }
 
   ngOnInit() {
+    this.event = this.eventSharedService
   }
 
 }
