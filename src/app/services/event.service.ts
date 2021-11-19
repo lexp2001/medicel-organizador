@@ -34,4 +34,8 @@ export class EventService {
       );
   }
 
+  postEvent(event: Event): Observable<any> {
+    return this.http.post<any>('https://medicelpro.azurewebsites.net/api/CreateEvent', event)
+  }
+
 }

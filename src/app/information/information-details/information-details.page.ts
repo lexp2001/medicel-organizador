@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventSharedService } from 'src/app/services/event-shared.service';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-information-details',
@@ -10,12 +11,21 @@ import { EventSharedService } from 'src/app/services/event-shared.service';
 export class InformationDetailsPage implements OnInit {
   event: any
 
+  spinnerVisibility = false
+
   constructor(
     private router: Router,
-    private eventSharedService: EventSharedService) { }
+    private eventSharedService: EventSharedService,
+    private eventService: EventService) { }
 
   saveEvent() {
-    console.log(this.event)
+    this.spinnerVisibility = true
+    this.eventService.postEvent(this.event)
+      .subscribe(data => {
+        console.log(data)
+        this.spinnerVisibility = false
+        this.router.navigate(['/daily-events'])
+      })
   }
 
   goName() {
