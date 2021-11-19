@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventService } from '../services/event.service';
 
 @Component({
   selector: 'app-daily-events',
@@ -8,24 +9,35 @@ import { Router } from '@angular/router';
 })
 export class DailyEventsPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private eventService: EventService) { }
 
-  goPlannedEvents(){
+  goPlannedEvents() {
     this.router.navigate(['/planned-events'])
   }
 
-  goPersonalInformation(){
+  goPersonalInformation() {
     this.router.navigate(['/personal-information'])
   }
 
-  goEventDetails(){
+  goEventDetails() {
     this.router.navigate(['/details-of-planned-events'])
   }
 
-  goEventName(){
+  goEventName() {
     this.router.navigate(['/event-name'])
   }
+
+  // getEvents() {
+  //   this.eventService.getEvents()
+  //     .subscribe(data => {
+  //       console.log(data)
+  //     })
+  // }
+
   ngOnInit() {
+    //this.getEvents()
   }
 
 }

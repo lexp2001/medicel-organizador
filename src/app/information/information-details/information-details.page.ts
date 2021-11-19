@@ -20,11 +20,11 @@ export class InformationDetailsPage implements OnInit {
 
   saveEvent() {
     this.spinnerVisibility = true
-    this.eventService.postEvent(this.event)
+    this.eventService.postEvent(this.event.eventData)
       .subscribe(data => {
         console.log(data)
         this.spinnerVisibility = false
-        this.router.navigate(['/daily-events'])
+        this.router.navigate(['/planned-events'])
       })
   }
 
