@@ -13,16 +13,13 @@
 
 <ion-content [fullscreen]="true">
 
-  
-
   <ion-toolbar>
-    <ion-segment value="all">
-      <ion-segment-button value="all" >Eventos <br>Diarios</ion-segment-button>
-      <ion-segment-button value="question" (click)="goPlannedEvents()" >Eventos <br>Planificados</ion-segment-button>
+    <ion-segment value="option1">
+      <ion-segment-button value="option1">Eventos <br>Diarios</ion-segment-button>
+      <ion-segment-button (click)="goPlannedEvents()">Eventos <br>Planificados</ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 
- 
   <div class="my-events">
     <ion-title>Sábado 25 de Septiembre</ion-title>
   </div>
@@ -41,7 +38,7 @@
       </ion-text>
     </ion-item>
   </ion-list>
-  
+
   <ion-list>
     <ion-item (click)="goEventDetails()">
       <ion-thumbnail>
@@ -122,14 +119,14 @@
     </ion-item>
   </ion-list>
 
-  
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goEventName()">
+    <ion-fab-button (click)="onClickCreateDailyEvent()">
       <ion-icon name="add-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  
-<!-- 
+
+  <!-- 
   <ion-tabs>
     
     <ion-tab-bar color="primary" slot="bottom">
@@ -161,6 +158,6 @@
 
     </ion-tab-bar>
   </ion-tabs> -->
-  
+
 
 </ion-content>

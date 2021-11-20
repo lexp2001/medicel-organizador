@@ -13,9 +13,9 @@
 <ion-content [fullscreen]="true">
 
   <ion-toolbar>
-    <ion-segment value="all">
-      <ion-segment-button value="question" (click)="goDailyEvents()">Eventos <br>Diarios</ion-segment-button>
-      <ion-segment-button value="all">Eventos <br>Planificados</ion-segment-button>
+    <ion-segment value="option2">
+      <ion-segment-button (click)="goDailyEvents()">Eventos <br>Diarios</ion-segment-button>
+      <ion-segment-button value="option2">Eventos <br>Planificados</ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 
@@ -133,5 +133,6 @@
 
 </ion-content>
 
-<ion-spinner *ngIf="!listVisibility" style="position: absolute; z-index: 99; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);">
+<ion-spinner *ngIf="!listVisibility"
+  style="position: absolute; z-index: 99; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);">
 </ion-spinner>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventSharedService } from '../services/event-shared.service';
 import { EventService } from '../services/event.service';
 
 @Component({
@@ -8,10 +9,12 @@ import { EventService } from '../services/event.service';
   styleUrls: ['./daily-events.page.scss'],
 })
 export class DailyEventsPage implements OnInit {
+  event: any
 
   constructor(
     private router: Router,
-    private eventService: EventService) { }
+    private eventService: EventService,
+    private eventSharedService: EventSharedService) { }
 
   goPlannedEvents() {
     this.router.navigate(['/planned-events'])
@@ -25,7 +28,8 @@ export class DailyEventsPage implements OnInit {
     this.router.navigate(['/details-of-planned-events'])
   }
 
-  goEventName() {
+  onClickCreateDailyEvent() {
+    this.event.eventType = "daily"
     this.router.navigate(['/event-name'])
   }
 
@@ -37,6 +41,7 @@ export class DailyEventsPage implements OnInit {
   // }
 
   ngOnInit() {
+    this.event = this.eventSharedService
     //this.getEvents()
   }
 

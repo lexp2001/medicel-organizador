@@ -27,6 +27,18 @@ export class PlannedEventsPage implements OnInit {
 
   public listVisibility = false
 
+  public plannedEventsArray: EventInterface[] = [
+    {
+      "name": "",
+      "description": "",
+      "cover": "",
+      "address": "",
+      "date": "",
+      "hour": "",
+      "type": ""
+    }
+  ]
+
   constructor(
     private router: Router,
     private eventService: EventService,
@@ -55,6 +67,15 @@ export class PlannedEventsPage implements OnInit {
       .subscribe(data => {
         this.eventList = data
         this.listVisibility = true
+        // console.log(this.eventList)
+
+        let plannedEventsFromService = this.eventList.filter(data => {
+          return data.type == "planned"
+        })
+
+        plannedEventsFromService = this.plannedEventsArray
+        console.log(plannedEventsFromService)
+
       })
   }
 
