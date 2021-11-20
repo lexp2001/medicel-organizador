@@ -1,145 +1,241 @@
-.organizer, .widgets{
-    display: flex;
+.organizer,
+.widgets {
+    display        : flex;
     justify-content: space-between;
-    padding: 20px;
+    padding        : 20px;
 }
 
 .container {
     position: relative;
-  }
-  
-  .topleft {
-    position: absolute;
-    top: 8px;
+}
+
+.topleft {
+    position : absolute;
+    top      : 8px;
     font-size: 18px;
-  }
-  
-  img { 
-    width: 100%;
-    height: auto;
-    border-radius:0px 0px 35px 35px !important;
-  }
-  
-.event-name{
+}
+
+img {
+    width        : 100%;
+    height       : auto;
+    border-radius: 0px 0px 35px 35px !important;
+}
+
+.event-name {
     display: flex;
     padding: 20px;
 
-    .div-date{
+    .div-date {
         text-align: center;
     }
-    .hour-event{  
+
+    .hour-event {
         color: rgb(143, 143, 143);
     }
 }
 
 ion-title {
-    margin-top: 10px;
-    color: rgb(143, 143, 143);
+    margin-top : 10px;
+    color      : rgb(143, 143, 143);
     font-weight: 400;
 }
 
-.buttons-invitation{
-    display: flex;
+.buttons-invitation {
+    display        : flex;
     justify-content: space-evenly;
 
-    button{
-        margin-top: 10px;
-        width: 150px;
-        height: 50px;
+    button {
+        margin-top      : 10px;
+        width           : 150px;
+        height          : 50px;
         background-color: #215AB7;
-        border-radius: 15px;
-        color: #ffffff;
-        font-size: 0.9pc;
+        border-radius   : 15px;
+        color           : #ffffff;
+        font-size       : 0.9pc;
 
     }
 }
 
-.about{
+.about {
 
-    p, button{
+    p,
+    button {
         margin-left: 20px;
     }
 
-    p{
+    p {
         color: gray;
 
     }
-    .button-read{
-        color: #215AB7;
-        font-size: 0.9em;
+
+    .button-read {
+        color      : #215AB7;
+        font-size  : 0.9em;
         font-weight: 900;
-        margin-top: 10px;
+        margin-top : 10px;
     }
 }
-p{
+
+p {
     margin-block-start: 0.3em;
-    margin-block-end: 0em;
-    color: rgb(83, 83, 83);
+    margin-block-end  : 0em;
+    color             : rgb(83, 83, 83);
 }
 
-.div-date{
-    margin-right:12px ;
-    width: 50px;
-    border-radius: 10px;
-   background-color: #215AB7;
-   color: white;
-   display: flex;
-   justify-content: center;
+.div-date {
+    margin-right    : 12px;
+    width           : 50px;
+    border-radius   : 10px;
+    background-color: #215AB7;
+    color           : white;
+    display         : flex;
+    justify-content : center;
 
-   p{
-       color: white !important;
-   }
+    p {
+        color: white !important;
+    }
 }
 
 
 
-.maps{
+.maps {
     text-align: -webkit-center;
     margin-top: 20px;
 }
 
-.img-maps{
+.img-maps {
     width: 90% !important;
 }
 
-.widgets{
-    div{
-    width: 100px;
-    height: 100px;
-    border-radius: 15px;
+.widgets {
+    div {
+        width        : 100px;
+        height       : 100px;
+        border-radius: 15px;
 
-    p{
-        text-align: center;
+        p {
+            text-align: center;
+        }
     }
-}
 
 }
 
-.div-red{
+.div-red {
     border: solid 1px #F66D6D;
 }
 
-.div-blue{
-    border: solid 1px #216AA8; 
+.div-blue {
+    border: solid 1px #216AA8;
 }
 
-.div-green{
-    border: solid 1px #29B41A; 
+.div-green {
+    border: solid 1px #29B41A;
 }
 
 
-.p-red{
-    color:#F66D6D;
+.p-red {
+    color    : #F66D6D;
     font-size: 2pc;
 }
 
-.p-blue{
-    color: #216AA8;
+.p-blue {
+    color    : #216AA8;
     font-size: 2pc;
 }
 
-.p-green{
-    color: #29B41A;
+.p-green {
+    color    : #29B41A;
     font-size: 2pc;
 
 }
+
+// START SNACKBAR
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility      : hidden;
+    /* Hidden by default. Visible on click */
+    min-width       : 250px;
+    /* Set a default minimum width */
+    margin-left     : -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color           : #fff;
+    /* White text color */
+    text-align      : center;
+    /* Centered text */
+    border-radius   : 2px;
+    /* Rounded borders */
+    padding         : 16px;
+    /* Padding */
+    position        : fixed;
+    /* Sit on top of the screen */
+    z-index         : 1;
+    /* Add a z-index if needed */
+    left            : 50%;
+    /* Center the snackbar */
+    bottom          : 30px;
+    /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility       : visible;
+    /* Show the snackbar */
+    /* Add animation : Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation        : fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom : 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom : 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom : 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom : 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom : 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom : 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom : 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom : 0;
+        opacity: 0;
+    }
+}
+
+// END SNACKBAR

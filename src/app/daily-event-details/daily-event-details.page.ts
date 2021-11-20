@@ -18,15 +18,17 @@ export class DailyEventDetailsPage implements OnInit {
     private eventService: EventService) { }
 
   goInvitationWorkers() {
-    this.router.navigate(['/invitation-workers'])
+    this.showSnackbar()
+    // this.router.navigate(['/invitation-workers'])
+  }
+
+  goInvitationClients() {
+    this.showSnackbar()
+    // this.router.navigate(['/invitation-clients'])
   }
 
   onClickCLose() {
     this.router.navigate(['/planned-events'])
-  }
-
-  goInvitationClients() {
-    this.router.navigate(['/invitation-clients'])
   }
 
   getEvent(eventId: string) {
@@ -34,6 +36,15 @@ export class DailyEventDetailsPage implements OnInit {
       .subscribe(data => {
         this.currentEvent = data
       })
+  }
+
+  showSnackbar() {
+    // Get the snackbar DIV
+    let x = document.getElementById("snackbar");
+    // Add the "show" class to DIV
+    x!.className = "show";
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function () { x!.className = x!.className.replace("show", ""); }, 3000);
   }
 
   ngOnInit() {
