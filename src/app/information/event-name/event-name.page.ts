@@ -14,15 +14,22 @@ export class EventNamePage implements OnInit {
     private router: Router,
     private eventSharedService: EventSharedService) { }
 
-  goEventDate(){
+  goEventDate() {
     this.router.navigate(['/event-date'])
   }
-  onClickCLose(){
+  onClickCLose() {
     this.router.navigate(['/daily-events'])
   }
 
   ngOnInit() {
     this.event = this.eventSharedService
+
+    if (this.event.eventType == "planned") {
+      console.log("Type is planned")
+    } else if (this.event.eventType == "daily") {
+      console.log("Type is daily")
+    }
+    this.event.eventData.type = this.event.eventType
   }
 
 }

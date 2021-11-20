@@ -4,7 +4,7 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      4 de 7
+      5 de 7
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onClickCLose()">
@@ -19,7 +19,7 @@
 
     <ion-card-header>
       <ion-card-title>
-        Dirección del Evento
+        Imagen del evento
       </ion-card-title>
 
       <ion-card-subtitle>
@@ -29,20 +29,13 @@
 
     <ion-card-content>
       <ion-item>
-        <ion-input name="email" types="text" placeholder="Dirección del Evento" [(ngModel)]="event.eventData.address">
+        <ion-input name="email" types="text" placeholder="Introducir URL de la imagen" [(ngModel)]="event.eventData.cover">
           <ion-icon name="home-outline"></ion-icon>
         </ion-input>
-
-
       </ion-item>
-
-
-
       <!-- <div class="sign-btn-wrap">
         <ion-button shape="round" fill="solid" class="sgn-btn">Siguiente</ion-button>
-  
       </div> -->
-
     </ion-card-content>
 
   </ion-card>

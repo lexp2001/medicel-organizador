@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { EventSharedService } from 'src/app/services/event-shared.service';
 
 @Component({
-  selector: 'app-event-address',
-  templateUrl: './event-address.page.html',
-  styleUrls: ['./event-address.page.scss'],
+  selector: 'app-event-cover',
+  templateUrl: './event-cover.page.html',
+  styleUrls: ['./event-cover.page.scss'],
 })
-export class EventAddressPage implements OnInit {
+export class EventCoverPage implements OnInit {
   event: any
 
   constructor(
@@ -15,7 +15,7 @@ export class EventAddressPage implements OnInit {
     private eventSharedService: EventSharedService) { }
 
   onClickNext() {
-    this.router.navigate(['/event-cover'])
+    this.router.navigate(['/event-assistants'])
   }
 
   onClickCLose() {

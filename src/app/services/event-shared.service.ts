@@ -12,8 +12,11 @@ export class EventSharedService {
     cover: "",
     address: "",
     date: "",
-    hour: ""
+    hour: "",
+    type: ""
   }
+
+  private _eventType = ""
 
   get eventData() {
     return this._eventData
@@ -21,5 +24,13 @@ export class EventSharedService {
 
   set eventData(data: Event) {
     this._eventData = data
+  }
+
+  get eventType() {
+    return this._eventType
+  }
+
+  set eventType(type: string) {
+    this._eventType = type
   }
 }

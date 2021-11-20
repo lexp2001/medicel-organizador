@@ -54,6 +54,10 @@ const routes: Routes = [
     loadChildren: () => import('./information/event-hour/event-hour.module').then( m => m.EventHourPageModule)
   },
   {
+    path: 'event-cover',
+    loadChildren: () => import('./information/event-cover/event-cover.module').then( m => m.EventCoverPageModule)
+  },
+  {
     path: 'assistants-details',
     loadChildren: () => import('./information/assistants-details/assistants-details.module').then( m => m.AssistantsDetailsPageModule)
   },

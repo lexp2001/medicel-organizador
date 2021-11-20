@@ -6,4 +6,5 @@ export interface Event {
     address: string
     date: string
     hour: string
+    type: string
 }

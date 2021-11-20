@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from '../services/event.service';
 import { Event as EventInterface } from '../interfaces/event.interface'
+import { EventSharedService } from '../services/event-shared.service';
 
 @Component({
   selector: 'app-planned-events',
@@ -10,6 +11,7 @@ import { Event as EventInterface } from '../interfaces/event.interface'
 })
 
 export class PlannedEventsPage implements OnInit {
+  event: any
 
   public eventList: EventInterface[] = [
     {
@@ -18,7 +20,8 @@ export class PlannedEventsPage implements OnInit {
       "cover": "",
       "address": "",
       "date": "",
-      "hour": ""
+      "hour": "",
+      "type": ""
     }
   ]
 
@@ -26,13 +29,15 @@ export class PlannedEventsPage implements OnInit {
 
   constructor(
     private router: Router,
-    private eventService: EventService) { }
+    private eventService: EventService,
+    private eventSharedService: EventSharedService) { }
 
   goDailyEvents() {
     this.router.navigate(['/daily-events'])
   }
 
-  goEventName() {
+  onClickCreatePlannedEvent() {
+    this.event.eventType = "planned"
     this.router.navigate(['/event-name'])
   }
 
@@ -54,6 +59,7 @@ export class PlannedEventsPage implements OnInit {
   }
 
   ngOnInit() {
+    this.event = this.eventSharedService
     this.getEvents()
   }
 
