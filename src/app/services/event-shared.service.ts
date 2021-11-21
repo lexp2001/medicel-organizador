@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Event } from '../interfaces/event.interface';
+import { EventInterface } from '../interfaces/event.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventSharedService {
 
-  private _eventData: Event = {
+  private _eventData: EventInterface = {
     name: "",
     description: "",
     cover: "",
@@ -22,7 +22,7 @@ export class EventSharedService {
     return this._eventData
   }
 
-  set eventData(data: Event) {
+  set eventData(data: EventInterface) {
     this._eventData = data
   }
 

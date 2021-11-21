@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from '../services/event.service';
-import { Event as EventInterface } from '../interfaces/event.interface'
+import { EventInterface } from '../interfaces/event.interface'
 import { EventSharedService } from '../services/event-shared.service';
 
 @Component({
@@ -69,19 +69,17 @@ export class PlannedEventsPage implements OnInit {
         this.listVisibility = true
         // console.log(this.eventList)
 
-        let plannedEventsFromService = this.eventList.filter(data => {
-          return data.type == "planned"
-        })
+        //let plannedEventsFromService = this.eventList.find({"type": "planned"})
 
-        plannedEventsFromService = this.plannedEventsArray
-        console.log(plannedEventsFromService)
+    // plannedEventsFromService = this.plannedEventsArray
+    //console.log(plannedEventsFromService)
 
-      })
-  }
+  })
+}
 
-  ngOnInit() {
-    this.event = this.eventSharedService
-    this.getEvents()
-  }
+ngOnInit() {
+  this.event = this.eventSharedService
+  this.getEvents()
+}
 
 }

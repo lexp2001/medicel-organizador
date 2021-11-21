@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Worker } from '../interfaces/worker.interface';
+import { WorkerService } from '../services/worker.service';
 
 @Component({
   selector: 'app-workers',
@@ -8,13 +10,26 @@ import { Router } from '@angular/router';
 })
 export class WorkersPage implements OnInit {
 
-  constructor(private router: Router) { }
+  public workerList: Worker[]
 
-  goDetailsEvent(){
+  constructor(
+    private router: Router,
+    private workerService: WorkerService) { }
+
+  goDetailsEvent() {
     this.router.navigate(['/details-of-planned-events'])
   }
 
+  getWorkers() {
+    this.workerService.getWorkers()
+      .subscribe(data => {
+        this.workerList = data
+        // console.log(this.workerList)
+      })
+  }
+
   ngOnInit() {
+    this.getWorkers()
   }
 
 }
