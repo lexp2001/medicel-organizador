@@ -54,7 +54,8 @@ export class PlannedEventsPage implements OnInit {
   }
 
   goEventDetails(eventId: string) {
-    this.router.navigate(['/daily-event-details/' + eventId])
+    this.router.navigate(['/details-of-planned-events'])
+    // this.router.navigate(['/daily-event-details/' + eventId])
   }
 
   goPersonalInformation() {
@@ -67,13 +68,6 @@ export class PlannedEventsPage implements OnInit {
       .subscribe(data => {
         this.eventList = data
         this.listVisibility = true
-        // console.log(this.eventList)
-
-        //let plannedEventsFromService = this.eventList.find({"type": "planned"})
-
-    // plannedEventsFromService = this.plannedEventsArray
-    //console.log(plannedEventsFromService)
-
   })
 }
 

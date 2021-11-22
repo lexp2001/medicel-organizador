@@ -19,7 +19,7 @@ export class DetailsOfPlannedEventsPage implements OnInit {
   }
 
   onClickCLose(){
-    this.router.navigate(['/daily-events'])
+    this.router.navigate(['/planned-events'])
   }
   ngOnInit() {
   }

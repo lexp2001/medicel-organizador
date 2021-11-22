@@ -28,7 +28,7 @@ export class DailyEventDetailsPage implements OnInit {
   }
 
   onClickCLose() {
-    this.router.navigate(['/planned-events'])
+    this.router.navigate(['/daily-events'])
   }
 
   getEvent(eventId: string) {

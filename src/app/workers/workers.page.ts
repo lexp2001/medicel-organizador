@@ -9,8 +9,17 @@ import { WorkerService } from '../services/worker.service';
   styleUrls: ['./workers.page.scss'],
 })
 export class WorkersPage implements OnInit {
+  spinnerVisibility = true
 
-  public workerList: Worker[]
+  public workerList: Worker[] = [{
+    "name": "",
+    "surname": "",
+    "email": "",
+    "phone": "",
+    "rut": "",
+    "status": "",
+    "questions": []
+  }]
 
   constructor(
     private router: Router,
@@ -24,8 +33,18 @@ export class WorkersPage implements OnInit {
     this.workerService.getWorkers()
       .subscribe(data => {
         this.workerList = data
-        // console.log(this.workerList)
+        this.spinnerVisibility = false
       })
+  }
+
+  getNumDose(doseReply: string) {
+    if (doseReply.includes("segunda")) {
+      return "2 dosis"
+    } else if (doseReply.includes("primera")) {
+      return "1 dosis"
+    } else {
+      return "0 dosis"
+    }
   }
 
   ngOnInit() {

@@ -12,12 +12,23 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-segment value="option2">
       <ion-segment-button (click)="goDailyEvents()">Eventos <br>Diarios</ion-segment-button>
       <ion-segment-button value="option2">Eventos <br>Planificados</ion-segment-button>
     </ion-segment>
-  </ion-toolbar>
+  </ion-toolbar> -->
+
+  <div style="display: flex; justify-content: space-around; margin-bottom: 14px; text-align: center; font-size: 15px;">
+    <span style="cursor: pointer;" (click)="goDailyEvents()">
+      Eventos <br>
+      Diarios
+    </span>
+    <span style="border-bottom: solid 1px skyblue; font-weight: 600; color: #707070; cursor: pointer;">
+      Eventos <br>
+      Planificados
+    </span>
+  </div>
 
   <ion-list *ngIf="listVisibility">
     <ion-item *ngFor="let event of eventList, let eventIndex = index" (click)="goEventDetails(event._id)">

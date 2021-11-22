@@ -13,112 +13,42 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-segment value="option1">
       <ion-segment-button value="option1">Eventos <br>Diarios</ion-segment-button>
       <ion-segment-button (click)="goPlannedEvents()">Eventos <br>Planificados</ion-segment-button>
     </ion-segment>
-  </ion-toolbar>
+  </ion-toolbar> -->
 
-  <div class="my-events">
-    <ion-title>Sábado 25 de Septiembre</ion-title>
+  <div style="display: flex; justify-content: space-around; margin-bottom: 14px; text-align: center; font-size: 15px;">
+    <span style="border-bottom: solid 1px skyblue; font-weight: 600; color: #707070; cursor: pointer;">
+      Eventos <br>
+      Diarios
+    </span>
+    <span style="cursor: pointer;" (click)="goPlannedEvents()">
+      Eventos <br>
+      Planificados
+    </span>
   </div>
 
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
-      <ion-thumbnail>
-        <ion-img src="assets/images/desayuno.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p class="hour">08:00 a 10:30</p>
-        <p class="p-event-name">Desayuno</p>
-        <p>
-          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
-      <ion-thumbnail>
-        <ion-img src="assets/images/almuerzo.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p class="hour">12:00 a 14:00</p>
-        <p class="p-event-name">Almuerzo</p>
-        <p>
-          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
-      <ion-thumbnail>
-        <ion-img src="assets/images/pizza.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p class="hour">18:30 a 23:00</p>
-        <p class="p-event-name">Noche de Pizza</p>
-        <p>
-          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-  <!-- <div>
-    <ion-title>Domingo 26 de Septiembre</ion-title>
+  <!-- <div class="my-events">
+    <ion-title>Sábado 25 de Septiembre</ion-title>
   </div> -->
 
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
+  <ion-list *ngIf="listVisibility">
+    <ion-item *ngFor="let event of eventList, let eventIndex = index" (click)="goEventDetails(event._id)">
       <ion-thumbnail>
-        <ion-img src="assets/images/desayuno.jpg"></ion-img>
+        <ion-img src="{{event.cover}}"></ion-img>
       </ion-thumbnail>
       <ion-text>
-        <p class="hour">08:00 a 10:30</p>
-        <p class="p-event-name">Desayuno</p>
+        <p class="hour">{{event.hour}}</p>
+        <p class="p-event-name">{{event.name}}</p>
         <p>
-          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
+          <ion-icon name="location-outline"></ion-icon>{{event.address}}
         </p>
       </ion-text>
     </ion-item>
   </ion-list>
-
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
-      <ion-thumbnail>
-        <ion-img src="assets/images/almuerzo.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p class="hour">12:00 a 14:00</p>
-        <p class="p-event-name">Almuerzo</p>
-        <p>
-          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
-
-  <ion-list>
-    <ion-item (click)="goEventDetails()">
-      <ion-thumbnail>
-        <ion-img src="assets/images/fast.jpg"></ion-img>
-      </ion-thumbnail>
-      <ion-text>
-        <p class="hour">18:30 a 23:00</p>
-        <p class="p-event-name">Noche de FastFood</p>
-        <p>
-          <ion-icon name="location-outline"></ion-icon>Rosario Norte 407
-        </p>
-      </ion-text>
-    </ion-item>
-  </ion-list>
-
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="onClickCreateDailyEvent()">
@@ -126,38 +56,8 @@
     </ion-fab-button>
   </ion-fab>
 
-  <!-- 
-  <ion-tabs>
-    
-    <ion-tab-bar color="primary" slot="bottom">
-
-      <ion-tab-button  tab="account">
-        <ion-icon name="person"></ion-icon>
-        <ion-label>Eventos <br> Diarios</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="contact">
-        <ion-icon name="call"></ion-icon>
-        <ion-label>Eventos <br> Planificados</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="settings">
-        <ion-icon name="settings"></ion-icon>
-        <ion-label>Mi <br>Cuenta</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="settings">
-        <ion-icon name="settings"></ion-icon>
-        <ion-label>Mis <br>Clientes</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="settings">
-        <ion-icon name="settings"></ion-icon>
-        <ion-label>Mis <br>Trabajadores</ion-label>
-      </ion-tab-button>
-
-    </ion-tab-bar>
-  </ion-tabs> -->
-
-
 </ion-content>
+
+<ion-spinner *ngIf="!listVisibility"
+  style="position: absolute; z-index: 99; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);">
+</ion-spinner>

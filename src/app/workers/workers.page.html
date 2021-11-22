@@ -17,153 +17,28 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let worker of workerList, let workerIndex = i">
-      <!-- <ion-avatar slot="start">
+    <ng-container *ngFor="let worker of workerList, let workerIndex = i">
+      <ion-item *ngIf="worker.name">
+        <!-- <ion-avatar slot="start">
         <img src="assets/images/valeria.jpg">
       </ion-avatar> -->
-      <ion-label>
-        <h3>{{worker.name}} {{worker.surname}}</h3>
-        <p style="opacity: .7;">{{worker.email}}</p>
-        <div>
-          <p>1 Dosis -</p>
-          <p class="n-testado">No Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
+        <ion-label>
+          <h3>{{worker.name}} {{worker.surname}}</h3>
+          <p style="opacity: .7;">{{worker.email}}</p>
+          <div>
+            <p *ngIf="worker.questions[2]">{{getNumDose(worker.questions[2])}}</p>
+            <p class="n-testado">No Testado</p>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ng-container>
 
-    <!--     
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/emiliano.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Emiliano de Aznar</h3>
-        <div>
-          <p>2 Dosis -</p>
-          <p class="testado">Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
 
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/rosa.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Rosa María Díez Vilar</h3>
-        <div>
-          <p>1 Dosis -</p>
-          <p class="testado">Testado</p>
-        </div>
-      
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/rodolfo.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Rodolfo Pablo</h3>
-        <div>
-          <p>2 Dosis -</p>
-          <p class="n-testado">No Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/soledad.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Soledad Pombo Galindo</h3>
-        <div>
-          <p>1 Dosis -</p>
-          <p class="testado">Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/angel.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Ángel Amorós Vazquez</h3>
-        <div>
-          <p>2 Dosis -</p>
-          <p class="n-testado">No Testado</p>
-        </div>
-    
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/hernando.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Hernando Solera Salmerón</h3>
-        <div>
-          <p>2 Dosis -</p>
-          <p class="n-testado">No Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/anabel.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Anabel Prado Roldán</h3>
-        <div>
-          <p>1 Dosis -</p>
-          <p class="testado">Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/valeria.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Valeria Ballester Batalla</h3>
-        <div>
-          <p>2 Dosis -</p>
-          <p class="n-testado">No Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/emiliano.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Emiliano de Aznar</h3>
-        <div>
-          <p>1 Dosis -</p>
-          <p class="testado">Testado</p>
-        </div>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/images/rosa.jpg">
-      </ion-avatar>
-      <ion-label>
-        <h3>Rosa María Díez Vilar</h3>
-        <div>
-          <p>1 Dosis -</p>
-          <p class="testado">Testado</p>
-        </div>
-      </ion-label>
-    </ion-item> -->
 
   </ion-list>
 
 </ion-content>
+
+<ion-spinner *ngIf="spinnerVisibility"
+  style="position: absolute; z-index: 99; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);">
+</ion-spinner>
